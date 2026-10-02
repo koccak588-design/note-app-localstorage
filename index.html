@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catatan Harian</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <p class="eyebrow">CATATAN / HARIAN</p>
+      <h1>Praktikum Local Storage</h1>
+      <p class="intro">Simpan catatan di browser dan kelola histori kapan saja.</p>
+
+      <form id="note-form">
+        <label for="note">Masukkan catatan</label>
+        <input type="text" name="note" id="note" placeholder="Contoh: Belajar JavaScript" required />
+
+        <label for="label">Keterangan</label>
+        <select name="label" id="label" required>
+          <option value="">Pilih keterangan</option>
+          <option value="prioritas">Prioritas</option>
+          <option value="medium">Medium</option>
+        </select>
+
+        <button type="submit">Simpan catatan</button>
+      </form>
+
+      <section class="history" aria-labelledby="history-title">
+        <div class="history-heading">
+          <div>
+            <h2 id="history-title">Histori catatan</h2>
+            <p id="hasil" role="status" aria-live="polite">Memuat catatan...</p>
+          </div>
+          <button id="delete-all" class="delete-all" type="button">Hapus semua</button>
+        </div>
+        <ul id="data-tampil" aria-live="polite"></ul>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
